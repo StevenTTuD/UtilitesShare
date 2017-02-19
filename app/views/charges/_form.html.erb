@@ -1,0 +1,17 @@
+<%= simple_form_for(@charge) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :charge_type, required: true, collection: Charge::CHARGE_TYPE[0..3] %>
+    <%= f.input :payer, required: true,collection: Charge::PAYER %>
+    <%= f.input :payee, required: true,collection: Charge::PAYEE[0..3] %>
+    <%= f.input :price, required: true %>
+    <%= f.input :paid_at, required: true %>
+    <%= f.input :note, as: :text %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, '新增' %>
+  </div>
+<% end %>

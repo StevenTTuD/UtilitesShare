@@ -1,0 +1,67 @@
+tw:
+  simple_form:
+    labels:
+      charge:
+        payee: '收款人'
+        payer: '付款人'
+        charge_type: '項目'
+        price: '金額'
+        note: '備註'
+        paid_at: '何時付的'
+    error_notification:
+      default_message: "填 好 填 滿"
+  errors:
+    messages:
+      blank: '必填好嘛! 懂？'
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%Y/%m/%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names:
+    - 一月
+    - 二月
+    - 三月
+    - 四月
+    - 五月
+    - 六月
+    - 七月
+    - 八月
+    - 九月
+    - 十月
+    - 十一月
+    - 十二月
+    order:
+    - :year
+    - :month
+    - :day

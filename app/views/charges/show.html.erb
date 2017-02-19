@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>項目:</strong>
+  <%= Charge::CHARGE_TYPE[@charge.charge_type][0] %>
+</p>
+
+<p>
+  <strong>金額:</strong>
+  <%= @charge.price %>
+</p>
+
+<p>
+  <strong>付款人:</strong>
+  <%= Charge::PAYER[@charge.payer][0] %>
+</p>
+<p>
+  <strong>收款人:</strong>
+  <%= Charge::PAYEE[@charge.payee][0] %>
+</p>
+<p>
+  <strong>何時付的:</strong>
+  <%= @charge.paid_at %>
+</p>
+
+<%= link_to 'Back', charges_path %>

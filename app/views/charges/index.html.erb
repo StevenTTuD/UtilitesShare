@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-8">
+    <h2>近期費用</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>項目類別</th>
+          <th>金額</th>
+          <th>付款人</th>
+          <th>收款人</th>
+          <th>何時付的</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @charges.each do |charge| %>
+          <tr>
+            <td><%= Charge::CHARGE_TYPE[charge.charge_type][0] %></td>
+            <td><%= charge.price %></td>
+            <td><%= Charge::PAYER[charge.payer][0] %></td>
+            <td><%= Charge::PAYEE[charge.payee][0] %></td>
+            <td><%= charge.paid_at ? charge.paid_at : link_to('付了', charge_path(charge),method: :patch,class: 'btn btn-default') %></td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <div>
+      <h2>應收項目</h2>
+      <p>跟___收___</p>
+      <p>跟___收___</p>
+      <p>跟___收___</p>
+    </div>
+    <div>
+      <h2>應付項目</h2>
+      <P>付___給___</P>
+      <P>付___給___</P>
+      <P>付___給___</P>
+    </div>
+    <div>
+      <h2>你的群組</h2>
+      <p>林罐頭</p>
+      <p>黃提分</p>
+      <p>楊k門</p>
+    </div>
+  </div>
+</div>
